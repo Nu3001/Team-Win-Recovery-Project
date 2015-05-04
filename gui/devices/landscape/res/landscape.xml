@@ -2295,12 +2295,6 @@
 			</object>
 
 			<object type="button">
-				<placement x="%col3_x%" y="%row2_y%" />
-				<text>Vibration Duration</text>
-				<action function="page">Vibrate</action>
-			</object>
-
-			<object type="button">
 				<placement x="%col4_x%" y="%row2_y%" />
 				<text>Screen</text>
 				<action function="page">screen</action>
@@ -2464,48 +2458,6 @@
 					<action function="compute">tw_brightness/100</action>
 					<action function="setbrightness">%tw_brightness%</action>
 				</actions>
-			</object>
-
-			<object type="action">
-				<touch key="home" />
-				<action function="page">main</action>
-			</object>
-
-			<object type="action">
-				<touch key="back" />
-				<action function="page">settings</action>
-			</object>
-
-			<object type="template" name="footer" />
-		</page>
-
-		<page name="Vibrate">
-			<object type="template" name="header" />
-
-			<object type="text">
-				<placement x="%center_x%" y="%row1_text_y%" placement="5" />
-				<text>Vibration Settings :</text>
-			</object>
-
-			<object type="slidervalue">
-				<placement x="slidervalue_x" y="%row3_text_y%" w="%slidervalue_w%" />
-				<text>Button Vibration:</text>
-				<data variable="tw_button_vibrate" min="0" max="300" />
-				<colors line="%slidervalue_line_clr%" slider="%slidervalue_slider_clr%" />
-			</object>
-
-			<object type="slidervalue">
-				<placement x="slidervalue_x" y="%row7_text_y%" w="%slidervalue_w%" />
-				<text>Keyboard Vibration:</text>
-				<data variable="tw_keyboard_vibrate" min="0" max="300" />
-				<colors line="%slidervalue_line_clr%" slider="%slidervalue_slider_clr%" />
-			</object>
-
-			<object type="slidervalue">
-				<placement x="slidervalue_x" y="%row11_text_y%" w="%slidervalue_w%" />
-				<text>Action Vibration:</text>
-				<data variable="tw_action_vibrate" min="0" max="500" />
-				<colors line="%slidervalue_line_clr%" slider="%slidervalue_slider_clr%" />
 			</object>
 
 			<object type="action">
