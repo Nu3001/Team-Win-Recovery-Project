@@ -205,7 +205,10 @@ int main(int argc, char **argv) {
 				} else
 					LOGERR("argument error specifying zip file\n");
 			} else if (*argptr == 'w') {
-				if (len == 9)
+				if (len == 8)
+					// 'wipe_all' is the default that is sent from rockchip
+					Factory_Reset = true;
+				else if (len == 9)
 					Factory_Reset = true;
 				else if (len == 10)
 					Cache_Wipe = true;
